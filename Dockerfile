@@ -2,6 +2,7 @@ FROM debian:jessie
 MAINTAINER dustyfresh, https://github.com/dustyfresh
 RUN apt-get update && apt-get install --yes vim build-essential python-setuptools python-pip supervisor curl
 RUN pip install flask
+RUN pip install setuptools -U
 RUN mkdir -pv /opt/honeypress/logs
 ADD src/templates /opt/honeypress/templates
 ADD src/config.py /opt/honeypress/config.py
